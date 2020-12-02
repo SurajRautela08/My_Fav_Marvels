@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GDU-Wh-svi">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--My Favourite Marvels-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="MarvelsListViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="MarvelsListViewController" customModule="My_Fav_Marvels" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LBJ-B8-6DX">
+                                <rect key="frame" x="0.0" y="140" width="414" height="722"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="LBJ-B8-6DX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Aex-mr-1PD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LBJ-B8-6DX" secondAttribute="trailing" id="Ccn-7o-TAG"/>
+                            <constraint firstItem="LBJ-B8-6DX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="LkP-Lg-61d"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="LBJ-B8-6DX" secondAttribute="bottom" id="mQv-AY-3zJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="My Favourite Marvels" id="UbH-lA-ct8">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="dSg-rK-tp3">
+                            <color key="tintColor" red="0.0086068049270000002" green="0.1266410862" blue="0.65408867390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="addMarvelsButtonAction:" destination="BYZ-38-t0r" id="WIV-fz-fNm"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="LBJ-B8-6DX" id="p3Q-by-40n"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="815.94202898550736" y="112.5"/>
+        </scene>
+        <!--Add My Marvel-->
+        <scene sceneID="LTL-2P-164">
+            <objects>
+                <viewController storyboardIdentifier="AddMarvelViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="C1X-Tw-Kio" customClass="AddMarvelViewController" customModule="My_Fav_Marvels" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1De-Nh-dn5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="marvel" translatesAutoresizingMaskIntoConstraints="NO" id="avC-ev-pBb">
+                                <rect key="frame" x="32" y="120" width="350" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="pU0-sO-7yx"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b1e-GZ-4p1">
+                                <rect key="frame" x="32" y="390" width="350" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="EIS-j1-37T">
+                                <rect key="frame" x="32" y="493" width="350" height="281"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sep-fs-oEa">
+                                <rect key="frame" x="64" y="790" width="286" height="40"/>
+                                <color key="backgroundColor" red="0.32979834079742432" green="0.71246594190597534" blue="0.17647525668144226" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="ccB-yK-Ib5"/>
+                                </constraints>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="saveButtonAction:" destination="C1X-Tw-Kio" eventType="touchUpInside" id="IJU-c5-4BF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mVG-CO-f5j">
+                                <rect key="frame" x="157" y="328" width="100" height="30"/>
+                                <color key="backgroundColor" red="0.0086068049270000002" green="0.1266410862" blue="0.65408867390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="9Zr-Gw-Ejh"/>
+                                    <constraint firstAttribute="width" constant="100" id="gwL-X6-8WZ"/>
+                                </constraints>
+                                <state key="normal" title="add image">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="addImageAction:" destination="C1X-Tw-Kio" eventType="touchUpInside" id="tD8-yz-yWM"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OrW-Y0-g2h">
+                                <rect key="frame" x="32" y="456" width="350" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90690726041793823" green="0.97049158811569214" blue="0.96914750337600708" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="EIS-j1-37T" firstAttribute="leading" secondItem="vaM-cf-QMR" secondAttribute="leading" constant="32" id="5Gk-Yi-yBj"/>
+                            <constraint firstItem="b1e-GZ-4p1" firstAttribute="leading" secondItem="vaM-cf-QMR" secondAttribute="leading" constant="32" id="7yO-yY-d3o"/>
+                            <constraint firstItem="mVG-CO-f5j" firstAttribute="top" secondItem="avC-ev-pBb" secondAttribute="bottom" constant="8" id="8Rq-fT-4nO"/>
+                            <constraint firstItem="vaM-cf-QMR" firstAttribute="trailing" secondItem="OrW-Y0-g2h" secondAttribute="trailing" constant="32" id="AtQ-JY-Bwd"/>
+                            <constraint firstItem="avC-ev-pBb" firstAttribute="top" secondItem="vaM-cf-QMR" secondAttribute="top" constant="32" id="BFX-0w-ASG"/>
+                            <constraint firstItem="OrW-Y0-g2h" firstAttribute="top" secondItem="b1e-GZ-4p1" secondAttribute="bottom" constant="32" id="EeV-UD-8hv"/>
+                            <constraint firstItem="vaM-cf-QMR" firstAttribute="trailing" secondItem="avC-ev-pBb" secondAttribute="trailing" constant="32" id="FG7-83-ynz"/>
+                            <constraint firstItem="vaM-cf-QMR" firstAttribute="bottom" secondItem="sep-fs-oEa" secondAttribute="bottom" constant="32" id="FSu-kL-Vk7"/>
+                            <constraint firstItem="OrW-Y0-g2h" firstAttribute="leading" secondItem="vaM-cf-QMR" secondAttribute="leading" constant="32" id="SPi-vD-SWa"/>
+                            <constraint firstItem="mVG-CO-f5j" firstAttribute="centerX" secondItem="b1e-GZ-4p1" secondAttribute="centerX" id="WrA-sV-pIf"/>
+                            <constraint firstItem="sep-fs-oEa" firstAttribute="top" secondItem="EIS-j1-37T" secondAttribute="bottom" constant="16" id="ZUq-aa-fIR"/>
+                            <constraint firstItem="sep-fs-oEa" firstAttribute="leading" secondItem="vaM-cf-QMR" secondAttribute="leading" constant="64" id="bvQ-2E-Bxh"/>
+                            <constraint firstItem="vaM-cf-QMR" firstAttribute="trailing" secondItem="b1e-GZ-4p1" secondAttribute="trailing" constant="32" id="ffv-cU-bdm"/>
+                            <constraint firstItem="vaM-cf-QMR" firstAttribute="trailing" secondItem="EIS-j1-37T" secondAttribute="trailing" constant="32" id="hh5-Sa-Jgp"/>
+                            <constraint firstItem="EIS-j1-37T" firstAttribute="top" secondItem="OrW-Y0-g2h" secondAttribute="bottom" constant="16" id="nUx-mx-z0l"/>
+                            <constraint firstItem="vaM-cf-QMR" firstAttribute="trailing" secondItem="sep-fs-oEa" secondAttribute="trailing" constant="64" id="oGp-kV-7UW"/>
+                            <constraint firstItem="avC-ev-pBb" firstAttribute="leading" secondItem="vaM-cf-QMR" secondAttribute="leading" constant="32" id="uRC-we-YP3"/>
+                            <constraint firstItem="b1e-GZ-4p1" firstAttribute="top" secondItem="mVG-CO-f5j" secondAttribute="bottom" constant="32" id="zVB-5H-Ktl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vaM-cf-QMR"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add My Marvel" id="GUk-kZ-lhR">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Psb-sd-4eH">
+                            <connections>
+                                <action selector="cancelButtonAction:" destination="C1X-Tw-Kio" id="Ab7-AI-bEw"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="addImage" destination="mVG-CO-f5j" id="Wmx-Wl-rP2"/>
+                        <outlet property="marvelDescription" destination="EIS-j1-37T" id="ABa-cd-Nb9"/>
+                        <outlet property="marvelImage" destination="avC-ev-pBb" id="dRS-5R-vBx"/>
+                        <outlet property="marvelName" destination="b1e-GZ-4p1" id="FiG-do-Wsk"/>
+                        <outlet property="saveButton" destination="sep-fs-oEa" id="CL4-GJ-bR3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nn9-sP-Pf7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2749.275362318841" y="110.49107142857143"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Eb9-kB-7Ol">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GDU-Wh-svi" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="acT-en-0se">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" red="0.0086068049270000002" green="0.1266410862" blue="0.65408867390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="j8K-O4-Ga4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bO5-CT-Z9x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-94.20289855072464" y="112.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="DdB-EK-lp3">
+            <objects>
+                <navigationController storyboardIdentifier="AddMarvelNavViewController" automaticallyAdjustsScrollViewInsets="NO" id="nvb-o9-jEu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Aoa-hE-Xee">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="C1X-Tw-Kio" kind="relationship" relationship="rootViewController" id="q5a-kB-Wj9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QuC-mF-SAg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1839.1304347826087" y="110.49107142857143"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="marvel" width="200" height="200"/>
+    </resources>
+</document>
